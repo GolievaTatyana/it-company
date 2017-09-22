@@ -1,0 +1,523 @@
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend
+	vertical-align: baseline
+	font-family: inherit
+	font-weight: inherit
+	font-style: inherit
+	font-size: 16px
+	outline: 0 none
+	padding: 0
+	margin: 0
+	border: 0
+
+*, *::before, *::after
+	box-sizing: border-box
+
+$bg-color0: rgba(255, 255, 255, 0.5) /*прозрачно-белый*/
+$bg-color1: #ffffff /*белый*/
+$bg-color2: rgba(0, 0, 0, 0.7) /*прозрачно-черный*/
+$bg-color3: rgba(52, 210, 147, 0.8) /*прозрачно-бирюзовый*/
+$bg-color4: #32312d /*черный*/
+$bg-color5: #8c7620 /*красно-золотой*/
+$bg-color6: #e96656 /*кораал*/
+$bg-color7: #272727 /*средне-серый*/
+$bg-color8: #171717 /*темно-серый*/
+
+$main-color1: #e96656 /*кораал*/
+$main-color2: #34d293 /*бирюза*/
+$main-color3: #3ab0e2 /*голубой*/
+$main-color4: #f2d050 /*желтый*/
+
+$border-color: #ececec /*серо голубой*/
+
+$darc-text: #404040 /*темно-серый*/
+$middle-text: #939393 /*средне-серый*/
+$light-text: #808080 /*светло-серый*/
+$white-text: #fff /*белый*/
+
+$main-margin: 90px
+
+$size-h1: 55px
+$size-h2: 45px
+$size-h3: 20px
+$size-h4: 17px
+$size-h5: 14px
+$size-p: 16px
+
+=button()
+	color: $white-text
+	padding: 10px 30px
+	border-radius: 5px
+	font-size: 13px
+=slogan()
+	color: $white-text
+	font-size: $size-h2/2
+
+body
+	background: url("../../img/banner/bg6.jpg") no-repeat
+	background-position: center top !important
+	background-attachment: fixed !important
+	background-size: cover
+	overflow-x: hidden
+	font-family: "Open Sans",sans-serif
+	color: $light-text
+	font-size: $size-p
+	h1
+		font-size: $size-h1
+		text-transform: uppercase
+		color: $white-text
+		font-weight: bolder
+	h2
+		font-size: $size-h2
+		text-transform: uppercase
+		color: $darc-text
+		margin-top: $main-margin
+		font-weight: bolder
+	h3
+		font-size: $size-h3
+		text-transform: uppercase
+		color: $darc-text
+		font-weight: bold
+	h4
+		font-size: $size-h4
+		color: $darc-text
+	h5
+		font-size: $size-h5
+		color: $darc-text
+	p
+		font-size: $size-p
+	span
+		font-size: $size-p
+	a
+		text-transform: uppercase
+		&:hover
+			text-decoration: none
+	ul
+		padding: 20px
+.wrapper
+	margin: $main-margin 0px
+.line1, .line2, .line3, .line4
+	display: block
+	width: 100%
+	height: 2px
+	margin: 5px 0px
+.line1
+	background: $main-color1
+.line2
+	background: $main-color2
+.line3
+	background: $main-color3
+.line4
+	background: $main-color4
+.color1, .color2, .color3
+	margin-bottom: $main-margin/2
+
+#header, #what_we_do, #case_stadies, #framevorcs
+	background: $bg-color1
+#banner, #git
+	background: $bg-color2
+#profile_top
+	background: $bg-color3
+#profile_content
+	background: $bg-color4
+#portfolio_main
+	background: $bg-color2
+#portfolio_view
+	background: $bg-color6
+#footer
+	background: $bg-color7
+
+#header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	overflow: hidden
+	min-height: 80px
+	z-index: 1000
+	margin-bottom: 0
+	box-shadow: 0 0 20px rgba(0,0,0,0.5)
+	transition: height 0.3s
+	.navbar-toggle
+		position: absolute
+		top: 5px
+		right: -16px
+		width: 50px
+		height: 50px
+		background-color: $main-color1
+		border-radius: 0
+	.icon-bar
+		display: block
+		background-color: $white-text
+		margin-left: 2px
+		margin-bottom: 5px
+		width: 25px
+		&:last-child
+			margin-bottom: 0px
+	.navbar-brand
+		margin-top: 12px
+		margin-left: -15px
+		color: $darc-text
+		font-size: 26px
+		font-weight: bold
+		text-transform: uppercase
+		display: inline-block
+		transition: height 0.3s
+		&:hover
+			background-color: white
+		span
+			padding: 0px 15px 5px 15px
+			margin-right: 3px
+			background: lighten($main-color1, 5%)
+			color: $white-text
+			font-family: serif
+			font-size: $size-p*3
+			text-transform: lowercase
+			transition: height 0.3s
+	.navbar-right
+		margin-bottom: 0px
+		a
+			text-transform: lowercase
+			color: $darc-text
+			padding: 30px 15px
+			transition: 0.5s
+			&:hover
+				background: $border-color
+			&:active
+				background: darken($border-color, 20%)
+		.active
+			background: darken($border-color, 20%)
+	.navbar-nav
+		padding: 0
+	.navbar
+		margin-bottom: 0
+	.navbar-collapse
+		padding: 0px 10px
+		overflow-x: hidden
+#header.smaller
+	min-height: 50px
+	.navbar-brand
+		margin-top: -1px
+		font-size: 18px
+		span
+			padding: 0px 10px 2px 10px
+			font-size: $size-p*2
+	.navbar-toggle
+		width: 36px
+		height: 36px
+		margin-top: 2px
+	.icon-bar
+		display: block
+		background-color: $white-text
+		margin-left: -4px
+		margin-bottom: 3px
+		width: 22px
+		&:last-child
+			margin-bottom: 0px
+	.nav
+		padding-top: 0px
+	.navbar-right
+		margin-bottom: 0px
+		a
+			padding: 15px 15px
+#banner
+	height: 100vh
+	h1
+		margin-top: 25vh
+	p
+		color: $main-color2
+		font-size: $size-p*2
+	.jumping
+
+		animation: jump 1.5s ease 0s infinite normal
+		a
+			display: inline-block
+			background: transparent
+			margin-bottom: 10vh
+			margin-top: 25vh
+	@keyframes jump
+		0%
+			transform: translateY(0)
+		20%
+			transform: translateY(0)
+		40%
+			transform: translateY(-30px)
+		50%
+			transform: translateY(0)
+		60%
+			transform: translateY(-15px)
+		80%
+			transform: translateY(0)
+		100%
+			transform: translateY(0)
+#what_we_do
+	.circle
+		border: 10px solid $border-color
+		border-radius: 50%
+		width: 180px
+		height: 180px
+		margin-bottom: $main-margin/3
+		transition: border-color 0.5s ease-in 0.1s
+	.circle1
+		background: url("../../img/what_we_do/1.jpg") no-repeat center center
+		background-size: cover
+	.circle2
+		background: url("../../img/what_we_do/3.jpg") no-repeat 10% 50%
+		background-size: cover
+	.circle3
+		background: url("../../img/what_we_do/2.jpg") no-repeat 10% 50%
+		background-size: cover
+
+	.circle1:hover
+		border-color: $main-color1
+	.circle2:hover
+		border-color: $main-color2
+	.circle3:hover
+		border-color: $main-color3
+	h3
+		text-align: center
+	.list1, .list2, .list3
+		margin-top: 15px
+		span
+			color: $light-text
+	ul
+		margin-bottom: $main-margin/3
+	.list1
+		li
+			color: $main-color1
+	.list2
+		li
+			color: $main-color2
+	.list3
+		li
+			color: $main-color3
+#profile_top
+	.wrapper
+		margin: $main-margin/2
+	h2
+		color: $white-text
+	p
+		+slogan()
+		line-height: 2
+#profile_content
+	.wrapper
+		margin-top: $main-margin/2
+	h3, h4
+		color: $white-text
+	h3, h4
+		margin: 10px 0px
+		text-align: center
+	ul
+		border-radius: 5px
+		min-height: 170px
+		margin-top: $main-margin/2
+		li
+			color: $darc-text
+			margin-left: 20px
+	.color1
+		h3
+			color: $main-color1
+		ul
+			background: $main-color1
+	.color2
+		h3
+			color: $main-color2
+		ul
+			background: $main-color2
+	.color3
+		h3
+			color: $main-color4
+		ul
+			background: $main-color4
+#case_stadies
+	h4, h5
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		&:hover
+			white-space: normal
+			cursor: n-resize
+	img
+		margin-bottom: $main-margin/3
+	h4
+		margin: 5px 0px
+		text-align: center
+		text-transform: uppercase
+	p
+		padding: 20px
+		margin-top: 10px
+		margin-bottom: $main-margin/3
+#portfolio_main
+	h2
+		color: $white-text
+	.hovereffect
+		width: 100%
+		height: 100%
+		float: left
+		overflow: hidden
+		position: relative
+		text-align: center
+		cursor: default
+		background: black
+		margin-bottom: 30px
+		.overlay
+			width: 100%
+			height: 100%
+			position: absolute
+			overflow: hidden
+			top: 0
+			left: 0
+			padding: 30px
+			text-align: left
+		img
+			display: block
+			position: relative
+			max-width: none
+			width: calc(100% + 60px)
+			transition: opacity 0.35s, transform 0.45s
+			transform: translate3d(-40px,0,0)
+		h6
+			text-transform: uppercase
+			color: $white-text
+			font-size: 17px
+			background-color: transparent
+			padding: 25% 0 10px 0
+			text-align: center
+		p
+			text-align: center
+			background: $main-color1
+			border-radius: 5px
+			&:hover
+				background: darken($main-color1, 20%)
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&:visited
+				text-decoration: none
+			&:focus
+				text-decoration: none
+		a
+			text-transform: lowercase
+			color: $white-text
+	.hovereffect a, p, h6
+		position: relative
+		top: 5%
+		opacity: 0
+		filter: alpha(opacity=0)
+		transition: opacity 0.35s, transform 0.45s
+		transform: translate3d(-70px,0,0)
+	.hovereffect:hover img
+		opacity: 0.5
+		filter: alpha(opacity=60)
+		transform: translate3d(0,0,0)
+	.hovereffect:hover,
+	.hovereffect:hover a, .hovereffect:hover p,
+	.hovereffect:hover h6
+		opacity: 1
+		filter: alpha(opacity=100)
+		transform: translate3d(0,0,0)
+#portfolio_view
+	.wrapper
+		margin: $main-margin/2 0px
+		p
+			+slogan()
+		a
+			+button()
+			background: darken($main-color1, 10%)
+			&:hover
+				background: darken($main-color1, 20%)
+#framevorcs
+	.framevorcs
+		margin: 20px 0px 10px 0px
+		.icons
+			margin-bottom: 10px
+#git
+	h2, label
+		color: $white-text
+	button
+		+button()
+		background: $main-color1
+		text-transform: uppercase
+		border: none
+		margin-top: $main-margin/2
+		margin-top: 35px
+		&:hover
+			background: darken($main-color1, 20%)
+#footer
+	.light_gray
+		padding: $main-margin/2 0
+	.darc
+		background: $bg-color8
+		padding: $main-margin/9 0
+		p
+			line-height: 2
+
+@media only screen and (max-width: 991px)
+	#banner
+		h1
+			font-size: 45px
+		p
+			font-size: 18px
+	#what_we_do, #profile, #case_stadies, #portfolio, #git
+		h2
+			font-size: 35px
+	#slogan
+		p
+			font-size: 20px
+	#portfolio_view
+		p
+			font-size: $size-h2/3
+		a
+			+button()
+	#framevorcs
+		.framevorcs
+			margin: 20px 30px 10px 30px
+
+@media only screen and (max-width: 767px)
+	#header
+		.navbar-brand
+			font-size: 18px
+			span
+				padding: 0px 15px 5px 15px
+				margin-right: 3px
+				font-size: 40px
+		.navbar-right
+			margin-bottom: 0px
+			a
+				padding: 10px 15px
+		.navbar
+			margin-bottom: 0px
+	#header.smaller
+		.navbar-right
+			margin-bottom: 0px
+			a
+				padding: 10px 15px
+	#banner
+		h1
+			font-size: 35px
+	#what_we_do, #profile, #case_stadies, #portfolio, #git
+		h2
+			font-size: 28px
+		span, p
+			font-size: 14px
+	#slogan
+		p
+			font-size: 17px
+	#portfolio_view
+		p
+			font-size: 17px
+		a
+			margin-top: 20px
+	#framevorcs
+		.framevorcs
+			margin: 20px 0px 10px 0px
+	#git
+		height: 100vh
+		h2
+			margin-top: 60px
+		.wrapper
+			margin: 30px 10px
+		button
+			margin-top: $main-margin/2
